@@ -6,6 +6,55 @@ This application intends to aid the medical health professional to identify the 
 
 ---
 
+## Getting Started: To-Do List
+
+Follow these steps to set up and run the Medical Report Assistant:
+
+1.  **Clone or Download:**
+    * Get a copy of the project code onto your local machine.
+    * `git clone <repository_url>` or download the ZIP file.
+
+2.  **Navigate to Project Directory:**
+    * Open your terminal or command prompt.
+    * Change directory into the project folder (e.g., `cd Streamlit-Medical-Assistant`).
+
+3.  **Set Up Python Environment (Recommended):**
+    * It's best practice to use a virtual environment.
+    * `python -m venv venv`
+    * Activate the environment:
+        * Windows: `.\venv\Scripts\activate`
+        * macOS/Linux: `source venv/bin/activate`
+
+4.  **Install Dependencies:**
+    * Install all required Python packages listed in `requirements.txt`.
+    * `pip install -r requirements.txt`
+
+5.  **Configure Google API Key:**
+    * Create a directory named `environment` inside the main project folder (i.e., at the same level as `app.py` and `utils`).
+    * Inside the `environment` directory, create a file named `.env`.
+    * Open the `.env` file and add your Google API key like this:
+        ```
+        GOOGLE_API_KEY=YOUR_API_KEY_HERE
+        ```
+    * Replace `YOUR_API_KEY_HERE` with your actual Google API key obtained from Google AI Studio or Google Cloud Console.
+
+6.  **Check ChromaDB Directory:**
+    * The application will attempt to create a directory named `chroma_db_store` in the project's root to store the patient database. Ensure you have write permissions in the project directory for this to be created automatically.
+
+7.  **Run the Application:**
+    * Make sure your virtual environment is activated and you are in the main project directory.
+    * Run the Streamlit app using the command:
+        * `streamlit run app.py`
+    * The application should open in your web browser automatically.
+
+8.  **Start Using:**
+    * Upload PDF or TXT blood reports via the "Process New Report" tab.
+    * Enter a unique Patient ID for each patient (new or existing).
+    * Use the "Symptom Analysis" tab for RAG-based suggestions.
+    * View past reports in the "View Patient History" tab.
+
+---
+
 ## Disclamer
 
 For Informational Purposes Only. Not Medical Advice.
